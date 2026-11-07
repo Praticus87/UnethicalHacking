@@ -1,0 +1,16 @@
+[project]
+name = "revive"
+version = "0.1.0"
+description = "Interactive EMG biofeedback prototype for rehabilitation (research/educational use only)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-p nicegui.testing.user_plugin"
+main_file = "revive/main.py"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 120
